@@ -3,13 +3,13 @@
 * [1. 什么是epoll](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#1-%E4%BB%80%E4%B9%88%E6%98%AFepoll)
 * [2. epoll函数接口](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#2-epoll%E5%87%BD%E6%95%B0%E6%8E%A5%E5%8F%A3)
 * [3. epoll工作原理](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#3-epoll%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86)
-* [4. linux下epoll如何实现高效处理百万句柄的](#4. linux下epoll如何实现高效处理百万句柄的)
-* [5. LT和ET两种工作方式](#5. LT和ET两种工作方式)
-* [6. epoll相对于select/poll的优势](#6. epoll相对于select/poll的优势)
-* [7. 使用建议](#7. 使用建议)
-* [8. 疑问](#8. 疑问)
-* [9. epoll使用框架](#9. epoll使用框架)
-* [10. 一个实例](#10. 一个实例)
+* [4. linux下epoll如何实现高效处理百万句柄的](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#4-linux%E4%B8%8Bepoll%E5%A6%82%E4%BD%95%E5%AE%9E%E7%8E%B0%E9%AB%98%E6%95%88%E5%A4%84%E7%90%86%E7%99%BE%E4%B8%87%E5%8F%A5%E6%9F%84%E7%9A%84)
+* [5. LT和ET两种工作方式](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#5-lt%E5%92%8Cet%E4%B8%A4%E7%A7%8D%E5%B7%A5%E4%BD%9C%E6%96%B9%E5%BC%8F)
+* [6. epoll相对于select/poll的优势](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#6-epoll%E7%9B%B8%E5%AF%B9%E4%BA%8Eselectpoll%E7%9A%84%E4%BC%98%E5%8A%BF)
+* [7. 使用建议](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#7-%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE)
+* [8. 疑问](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#8-%E7%96%91%E9%97%AE)
+* [9. epoll使用框架](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#9-epoll%E4%BD%BF%E7%94%A8%E6%A1%86%E6%9E%B6)
+* [10. 一个实例](https://github.com/github-guox/Study/blob/master/basis/NetworkProgramming/epoll-model.md#10-%E4%B8%80%E4%B8%AA%E5%AE%9E%E4%BE%8B)
 
 **reference url:**  <br/>
 
