@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/styles.fe29e6d7.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-88ad8183.72e148cb.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-components.e651a5b3.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-modules.1791c762.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-main.e00ba32f.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-assets.e16cb248.css">
+  
+  <link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/main.be245ecf.css">
+  
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/runtime_main.cdf51a90.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/styles.fe29e6d7.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-596046b7.1fd1861d.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-88ad8183.72e148cb.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-f693a0bb.5cb8593c.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-ea8a6886.a1d37802.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-78587d68.806ba2ee.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-b3a903c8.29d998a4.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-cb4214fe.eec3bb3e.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/vendor.91d18732.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-components.e651a5b3.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-modules.1791c762.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-common.bf5bbc4f.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-main.e00ba32f.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-track.b8916139.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-jobs.42d040f8.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-assets.e16cb248.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-schema.e678cfcc.js">
+  
+  <link rel="preload" as="script" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/main.be245ecf.js">
+  
+  <title>19. 删除链表的倒数第N个节点 - 力扣（LeetCode）</title>
+  <meta name="keywords" content="力扣, 力扣中国, leetcode, lingkou, leetcode中国, leetcode官网, 在线编程, lc, leetcode题解, leetcode答案, 面经, 算法, 面试, 求职, 招聘, 校招, 社招, 内推, 笔试, 面试题, 面试经验, 刷题, leetcode题库, 机器学习, 算法岗, 数据结构, 代码, 互联网, 编程, 开发, 程序员, 工程师, 白板面试, 码农, 程序猿, 领扣, 领扣网, 领扣网络, 领扣中国, BAT, BAT面试, OJ, online judge, coding interview, 技术面试, leetcode中文版, leetcodechina">
+  <script type="text/javascript" async="" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/analytics.js"></script><script type="text/javascript" async="" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/gio.js"></script><script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/push.js"></script><script type="text/javascript" async="" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/atrk.js"></script><script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/js"></script><script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/hm.js"></script><script>window.prerenderReady = false;</script>
+<style data-emotion="css"></style><style data-emotion="css-global"></style><style data-emotion="css-global"></style><style data-emotion="css-global"></style><style data-emotion="css-global"></style><style data-emotion="css-global"></style><style data-emotion="css-global"></style><style data-emotion="css"></style><style id="erd_scroll_detection_scrollbar_style">/* Created by the element-resize-detector library. */
+.erd_scroll_detection_container > div::-webkit-scrollbar { display: none; }
+
+.erd_scroll_detection_container_animation_active { -webkit-animation-duration: 0.1s; animation-duration: 0.1s; -webkit-animation-name: erd_scroll_detection_container_animation; animation-name: erd_scroll_detection_container_animation; }
+@-webkit-keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }
+@keyframes erd_scroll_detection_container_animation { 0% { opacity: 1; } 50% { opacity: 0; } 100% { opacity: 1; } }</style><script charset="utf-8" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-async-2d3698a6.454ea73b.js"></script><link rel="stylesheet" href="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/font-awesome.min.css"><link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/5bfbcacdd66b335654287472569d046b.png" sizes="16x16" data-react-helmet="true"><link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/f1834bfdc84ab4b9db292ef25bfe54c4.png" sizes="32x32" data-react-helmet="true"><link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/6d4472d655a345ce0f2b05e3e4568e6c.png" sizes="96x96" data-react-helmet="true"><link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/8a57d17259b43bfbc782cfd1fe7a3707.png" sizes="160x160" data-react-helmet="true"><link rel="icon" type="image/png" href="https://static.leetcode-cn.com/cn-mono-assets/production/main/3bc25e4afc7531d868c5b80cbc800789.png" sizes="192x192" data-react-helmet="true"><meta property="og:title" content="19. 删除链表的倒数第N个节点 - 力扣（LeetCode）" data-react-helmet="true"><meta name="description" content="给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2. 当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5. 说明： 给定的 n 保证是有效的。 进阶： 你能尝试使用一趟扫描实现吗？。19. Remove Nth Node From End of List: Given a linked list, remove the n-th node from the end of list and return its head. Example: Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note: Given n will always be valid. Follow up: Could you do this in one pass?" data-react-helmet="true"><meta property="og:description" content="给定一个链表，删除链表的倒数第 n 个节点，并且返回链表的头结点。 示例： 给定一个链表: 1-&gt;2-&gt;3-&gt;4-&gt;5, 和 n = 2. 当删除了倒数第二个节点后，链表变为 1-&gt;2-&gt;3-&gt;5. 说明： 给定的 n 保证是有效的。 进阶： 你能尝试使用一趟扫描实现吗？。19. Remove Nth Node From End of List: Given a linked list, remove the n-th node from the end of list and return its head. Example: Given linked list: 1-&gt;2-&gt;3-&gt;4-&gt;5, and n = 2. After removing the second node from the end, the linked list becomes 1-&gt;2-&gt;3-&gt;5. Note: Given n will always be valid. Follow up: Could you do this in one pass?" data-react-helmet="true"><meta property="og:site_name" content="力扣 LeetCode" data-react-helmet="true"></head>
+<body>
+  
+  <!-- 519c3f58 -->
+  <!-- 1.42.5 -->
+  
+
+  <div id="app"><div id="lc-home" class="css-q0hzi-HomeWrapper e5i1odf1"><div class="layout__3dXm"><div data-status="entered" data-is-loading="false" class="css-bu99vi-HeaderCn e5i1odf0"><div class="css-1kv0viy-NavWrapper e5i1odf1"><nav class="css-ir7nau-NavContainer e5i1odf2"><ul class="css-1hthjdu-NavbarList e5i1odf4"><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/"><img src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/f2ece5fe978d056f5a425ad3387216ee.svg" alt="logo"></a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/explore/">探索</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/problemset/all/">题库</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/circle/">圈子</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/contest/">竞赛</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/interview/">面试</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a href="https://leetcode-cn.com/jobs/all/">职位</a></li><li class="css-1ua4ozn-NavbarListItem e5i1odf5"><a class="ant-dropdown-link ant-dropdown-trigger"><div style="color: rgb(255, 109, 0); display: flex; justify-content: space-between; align-items: center;"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M4 4h16v2H4V4zm10 14h4v2h-4v-2zM4 7h16l1 5v2h-1v6h-2v-6h-4v6H4v-6H3v-2l1-5zm2 7v4h6v-4H6zm12.96-2l-.6-3H5.64l-.6 3h13.92z"></path></svg>商店<svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon" style="width: 14px; height: 14px;"><path fill-rule="evenodd" d="M7 10l5 5 5-5z"></path></svg></div></a></li></ul><div class="css-hneolo-NavbarMenu e5i1odf3"><a href="https://leetcode-cn.com/premium/"><div class="css-1czv9ap-PromoteButton e5i1odf10"><svg width="18" height="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><defs><lineargradient id="vip-mark-gradient" gradientTransform="rotate(45)"><stop offset="0%" stop-color="#BCAAA4"></stop><stop offset="100%" stop-color="#6D4C41"></stop></lineargradient></defs><path fill="url(#vip-mark-gradient)" d="M17,3 C18.1,3 19,3.9 19,5 L19,21 L12,18 L5,21 L5.01,5 C5.01,3.9 5.9,3 7,3 L17,3 Z M16,8 L13.697,8 L11.999,10.969 L10.303,8 L8,8 L11.999,15 L16,8 Z"></path></svg><span>会员中心</span></div></a><div class="css-ut5ksi-NavbarMenuIconItem e5i1odf6"><a class="ant-dropdown-link ant-dropdown-trigger"><svg viewBox="0 0 24 24" width="1em" height="1em" class="e5i1odf0 css-ffufsn-icon-NavbarIcon"><path d="M11 8V4h2v4h7v8h-2v-1h-5v6h-2v-6H6v1H4V8h7zm0 2H6v3h5v-3zm2 0v3h5v-3h-5z"></path></svg><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M7 10l5 5 5-5z"></path></svg></a></div><div class="css-ut5ksi-NavbarMenuIconItem e5i1odf6"><svg viewBox="0 0 24 24" width="1em" height="1em" class="e5i1odf0 css-ffufsn-icon-NavbarIcon"><path fill-rule="evenodd" d="M21 5H3v14h9v2H1V3h22v7h-2V5zm-3 11v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3zM6 8l7 4.001L6 16v-2.303l2.969-1.696L6 10.303V8z"></path></svg></div><div class="css-ut5ksi-NavbarMenuIconItem e5i1odf6"><a class="ant-dropdown-link ant-dropdown-trigger"><div class="css-1091jpr-Container"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M18 16v-5c0-3.07-1.64-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-6 6c1.1 0 2-.9 2-2h-4a2 2 0 0 0 2 2z"></path></svg><div class="css-jis4i8-Counter">15</div></div></a></div><div data-tour-index="6" class="css-ut5ksi-NavbarMenuIconItem e5i1odf6"><a class="ant-dropdown-link ant-dropdown-trigger"><span class="ant-avatar ant-avatar-circle ant-avatar-image" style="width: 20px; height: 20px; line-height: 20px; font-size: 18px;"><img src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/avatar_1524131039.png"></span></a></div></div><div id="new-ft"><a href="https://leetcode-cn.com/premium/" target="_blank">  <img src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/student.png">  </a></div></nav></div><div data-show-mask="false" class="css-1ldtbl2-Container e5i1odf0"><div class="css-1416zuw-Wrapper e5i1odf1"><div class="css-r0ewhb-Left e5i1odf2"><h4 class="css-3mrlhg-Title e5i1odf3"><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/">19. 删除链表的倒数第N个节点</a></h4><div class="css-nj515r-Tools e5i1odf4"><span data-small-spacing="true" class="css-14oznsj-Difficulty e5i1odf5">难度</span><span data-degree="medium" class="css-14oznsj-Difficulty e5i1odf5">中等</span><button class="css-1ey88ll-Button e5i1odf1"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M7 19v-8H4v8h3zM7 9c0-.55.22-1.05.58-1.41L14.17 1l1.06 1.05c.27.27.44.65.44 1.06l-.03.32L14.69 8H21c1.1 0 2 .9 2 2v2c0 .26-.05.5-.14.73l-3.02 7.05C19.54 20.5 18.83 21 18 21H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h3zm2 0v10h9l3-7v-2h-9l1.34-5.34L9 9z"></path></svg><span>520</span></button><button class="css-1ey88ll-Button e5i1odf1"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M17 3v12c0 .55-.22 1.05-.58 1.41L9.83 23l-1.06-1.05c-.27-.27-.44-.65-.44-1.06l.03-.32.95-4.57H3c-1.1 0-2-.9-2-2v-2c0-.26.05-.5.14-.73l3.02-7.05C4.46 3.5 5.17 3 6 3h11zm-2 12V5H6l-3 7v2h9l-1.34 5.34L15 15zm2-2h3V5h-3V3h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-3v-2z"></path></svg><span></span></button><button class=" css-1ey88ll-Button e5i1odf1"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M16.5 3c-1.74 0-3.41.81-4.5 2.09C10.91 3.81 9.24 3 7.5 3 4.42 3 2 5.42 2 8.5c0 3.78 3.4 6.86 8.55 11.54L12 21.35l1.45-1.32C18.6 15.36 22 12.28 22 8.5 22 5.42 19.58 3 16.5 3zm-4.4 15.55l-.1.1-.1-.1C7.14 14.24 4 11.39 4 8.5 4 6.5 5.5 5 7.5 5c1.54 0 3.04.99 3.57 2.36h1.87C13.46 5.99 14.96 5 16.5 5c2 0 3.5 1.5 3.5 3.5 0 2.89-3.14 5.74-7.9 10.05z"></path></svg><span>收藏</span></button><button class=" css-1ey88ll-Button e5i1odf1"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M17 5V2l5 5h-9a2 2 0 0 0-2 2v8H9V9a4 4 0 0 1 4-4h4zm3 14V9h2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3v2H4v14h16z"></path></svg><span>分享</span></button><button class="css-1ey88ll-Button e5i1odf1"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path></svg>切换为英文</button></div></div><div class="css-1mjr2l3-Right e5i1odf6"><div class="css-doqm90-Submission e5i1odf7"><p class="css-1jt1h9n-Type e5i1odf9">通过次数</p><p class="css-1onqcw6-Count e5i1odf10">73,318</p></div><div class="css-15pv0qk-Separator e5i1odf8"></div><div class="css-doqm90-Submission e5i1odf7"><p class="css-1jt1h9n-Type e5i1odf9">提交次数</p><p class="css-1onqcw6-Count e5i1odf10">206,502</p></div></div></div></div></div><div class="main__1pRE"><div class="content__2ioQ" data-is-bar-active="false"><div class="css-1xhj18k"><div class="side-tools-wrapper__LX6i css-3kn4l7" style="flex: 0.865845 0 0px;"><div class="side-tools__3mLh" style="position: relative;"><div class="wrapper__3mF4"><div class=" notranslate css-11zaw7c-TabView e5i1odf0" id="question-detail-main-tabs"><div type="default" width="100%" class="css-5wdlwo-TabViewHeader e5i1odf1"><div class="css-1lexzqe-TabHeaderContainer e5i1odf2"><div data-key="description" data-disabled="false" type="default" class="css-1qty3gt-TabHeader e5i1odf4"><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/"><div type="default" class="css-1ch52y7-TabHeaderRow e5i1odf3"><span><div class="css-pusovc-TabHeader"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12zM6 10h2v2H6v-2zm0 4h8v2H6v-2zm10 0h2v2h-2v-2zm-6-4h8v2h-8v-2z"></path></svg>题目描述</div></span></div></a></div><div data-key="comments" data-disabled="false" type="default" class="css-1647bxt-TabHeader e5i1odf4"><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/comments/"><div type="default" class="css-1ch52y7-TabHeaderRow e5i1odf3"><span><div class="css-pusovc-TabHeader"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M8.995 22a.955.955 0 0 1-.704-.282.955.955 0 0 1-.282-.704V18.01H3.972c-.564 0-1.033-.195-1.409-.586A1.99 1.99 0 0 1 2 15.99V3.97c0-.563.188-1.032.563-1.408C2.94 2.188 3.408 2 3.972 2h16.056c.564 0 1.033.188 1.409.563.375.376.563.845.563 1.409V15.99a1.99 1.99 0 0 1-.563 1.432c-.376.39-.845.586-1.409.586h-6.103l-3.709 3.71c-.22.187-.454.281-.704.281h-.517zm.986-6.01v3.1l3.099-3.1h6.948V3.973H3.972V15.99h6.01zm-3.99-9.013h12.018v2.018H5.991V6.977zm0 4.037h9.014v1.972H5.99v-1.972z"></path></svg>评论 (639)</div></span></div></a></div><div data-key="solution" data-disabled="false" type="default" class="css-1647bxt-TabHeader e5i1odf4"><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/"><div type="default" class="css-1ch52y7-TabHeaderRow e5i1odf3"><span><div class="css-pusovc-TabHeader"><div class="css-1yzu46n-StyledTitleContainer"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M5.016 17.995c0 .282.093.517.28.705.188.187.423.297.704.328h12a1.14 1.14 0 0 0 .703-.328.902.902 0 0 0 .281-.658c0-.25-.062-.454-.187-.61l-5.813-9.094V3.972h-1.968v4.366l-5.813 9.094a.875.875 0 0 0-.187.563zM6 21c-.844 0-1.547-.282-2.11-.845-.562-.563-.859-1.283-.89-2.16 0-.594.172-1.126.516-1.596L9 7.822V5.99a.953.953 0 0 1-.703-.282.956.956 0 0 1-.281-.704V3.972c0-.564.187-1.033.562-1.409C8.953 2.188 9.422 2 9.984 2h4.032c.562 0 1.03.188 1.406.563.375.376.562.845.562 1.409v1.033a.956.956 0 0 1-.28.704.953.953 0 0 1-.704.282v1.83l5.484 8.578c.344.47.516 1.002.516 1.596-.031.877-.328 1.597-.89 2.16-.563.563-1.266.845-2.11.845H6z"></path></svg>题解(135)<span class="css-17722pm-StyledBanner">New</span></div></div></span></div></a></div><div data-key="submissions" data-disabled="false" type="default" class="css-1647bxt-TabHeader e5i1odf4"><a href="https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/submissions/"><div type="default" class="css-1ch52y7-TabHeaderRow e5i1odf3"><span><div class="css-pusovc-TabHeader"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path d="M11.99 2C17.52 2 22 6.48 22 12s-4.48 10-10.01 10C6.47 22 2 17.52 2 12S6.47 2 11.99 2zM12 20c4.42 0 8-3.58 8-8s-3.58-8-8-8-8 3.58-8 8 3.58 8 8 8zm.5-13v5.25l4.5 2.67-.75 1.23L11 13V7z"></path></svg>提交记录</div></span></div></a></div></div></div><div data-key="description-content" class="tab-pane__1SHj css-1d0cp2x-TabContent e5i1odf5"><div class="description__3IyN"><div class="content__2ebE"><div html="&lt;p&gt;给定一个链表，删除链表的倒数第&amp;nbsp;&lt;em&gt;n&amp;nbsp;&lt;/em&gt;个节点，并且返回链表的头结点。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;示例：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;给定一个链表: &lt;strong&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;5&lt;/strong&gt;, 和 &lt;strong&gt;&lt;em&gt;n&lt;/em&gt; = 2&lt;/strong&gt;.
+
+当删除了倒数第二个节点后，链表变为 &lt;strong&gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;5&lt;/strong&gt;.
+&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;给定的 &lt;em&gt;n&lt;/em&gt;&amp;nbsp;保证是有效的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;进阶：&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;你能尝试使用一趟扫描实现吗？&lt;/p&gt;
+" class="notranslate"><p>给定一个链表，删除链表的倒数第&nbsp;<em>n&nbsp;</em>个节点，并且返回链表的头结点。</p>
+
+<p><strong>示例：</strong></p>
+
+<pre>给定一个链表: <strong>1-&gt;2-&gt;3-&gt;4-&gt;5</strong>, 和 <strong><em>n</em> = 2</strong>.
+
+当删除了倒数第二个节点后，链表变为 <strong>1-&gt;2-&gt;3-&gt;5</strong>.
+</pre>
+
+<p><strong>说明：</strong></p>
+
+<p>给定的 <em>n</em>&nbsp;保证是有效的。</p>
+
+<p><strong>进阶：</strong></p>
+
+<p>你能尝试使用一趟扫描实现吗？</p>
+</div></div><div class="header__2ao3"><div class="css-w2y4u3">在真实的面试中遇到过这道题？</div><div class="btn-wrapper__PZW-"><button class="action-btn__3ydh css-1o9y6ik-xs-Btn e5i1odf0" type="secondary-border"><span class="css-1km43m6-BtnContent e5i1odf1">是</span></button></div><div class="btn-wrapper__PZW-"><button class="action-btn__3ydh css-1o9y6ik-xs-Btn e5i1odf0" type="secondary-border"><span class="css-1km43m6-BtnContent e5i1odf1">否</span></button></div></div><div class="container__35eI"><div class="label__1TJ4">贡献者</div><div class="contributors__1Ef7"><div><a id="0" target="_blank"><img class="avatar__3dBl" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/LeetCode_avatar.png" alt="LeetCode"></a></div></div></div><div class="css-isal7m"><div class="css-1819af6-baseHeaderStyle e5i1odf0"><div class="css-1jqueqk"><div class="header__1If0">相关企业<svg viewBox="0 0 24 24" width="1em" height="1em" class="lock-icon__26Ue css-1lc17o4-icon"><path fill-rule="evenodd" d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"></path></svg></div></div><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1dnbzsg-icon"><path fill-rule="evenodd" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></div><div class="css-1hky5w4"></div></div><div class="css-isal7m"><div class="css-1819af6-baseHeaderStyle e5i1odf0"><div class="css-1jqueqk"><div class="header__22S7">相关标签</div></div><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1dnbzsg-icon"><path fill-rule="evenodd" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></div><div class="css-1hky5w4"><div class="topic-tags__1S89"><a class="topic-tag__1z4-" href="https://leetcode-cn.com/tag/linked-list/"><div class="css-17pj4zl-TagWrapper e5i1odf0">链表</div></a><a class="topic-tag__1z4-" href="https://leetcode-cn.com/tag/two-pointers/"><div class="css-17pj4zl-TagWrapper e5i1odf0">双指针</div></a></div></div></div><div class="css-isal7m"><div class="css-1819af6-baseHeaderStyle e5i1odf0"><div class="css-1jqueqk"><div class="header__1OHv">显示提示1</div></div><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1dnbzsg-icon"><path fill-rule="evenodd" d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"></path></svg></div><div class="css-1hky5w4"><div html="Maintain two pointers and update one with a delay of n steps.">Maintain two pointers and update one with a delay of n steps.</div></div></div></div></div><div data-key="comments-content" class="tab-pane__1SHj css-16sr7sc-TabContent e5i1odf5"></div><div data-key="solution-content" class="tab-pane__1SHj css-16sr7sc-TabContent e5i1odf5"></div><div data-key="submissions-content" class="tab-pane__1SHj css-16sr7sc-TabContent e5i1odf5"></div></div></div><div class="bottom-container__3F9M"><div class="question-fast-picker-wrapper__3JMn" data-is-over-edged="false"><div class="question-fast-picker__3qGP"><button class="picker-menu-handler__1qoy css-b8cky7-default-sm-Btn e5i1odf0" data-tour-index="2" type="default"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M7 19h14v-2H7v2zm0-6h14v-2H7v2zm0-8v2h14V5H7zM3 5h2v2H3V5zm0 6h2v2H3v-2zm0 6h2v2H3v-2z"></path></svg><span class="handler-text__1FDD">题目列表</span></button><div class="picker-handlers__2tMY" data-is-resizer-bar-active="false"><div class="space-filler__2E6x"></div><button class="shuffle-handler__3i8W css-b8cky7-default-sm-Btn e5i1odf0" type="default"><svg viewBox="0 0 24 24" width="1em" height="1em" class="shuffle-icon__RMDE css-1lc17o4-icon"><path fill-rule="evenodd" d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"></path></svg><span class="handler-text__1FDD">随机一题</span></button><div class="space-filler__2E6x"></div><div class="picker-pagination-handlers__3dWm"><button id="prev-question-btn" type="default" data-tour-index="4" class="css-b8cky7-default-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="handler-icon__2RWV css-1lc17o4-icon"><path fill-rule="evenodd" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg><span class="handler-text__1FDD">上一题</span></button><div class="pagination-screen__DnGE"><span>19/1174</span></div><button id="next-question-btn" type="default" data-tour-index="5" class="css-b8cky7-default-sm-Btn e5i1odf0"><span class="handler-text__1FDD">下一题</span><svg viewBox="0 0 24 24" width="1em" height="1em" class="handler-icon__2RWV css-1lc17o4-icon"><path fill-rule="evenodd" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></div></div></div></div></div><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; left: -11px; top: -11px; right: -10px; bottom: -10px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 628px; height: 543px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></div><div data-is-active="false" data-is-collapsed="false" class="resize-bar__35z8 css-2zi37s"><svg width="4" height="27" xmlns="http://www.w3.org/2000/svg" class="arrow-indicator__2usv"><path d="M3.248 13.401c.012.06.013.123.002.186L.992 26.389a.5.5 0 1 1-.984-.173l2.257-12.803a.51.51 0 0 1 .002-.012.51.51 0 0 1-.002-.012L.008.587A.5.5 0 1 1 .992.413L3.25 13.216a.499.499 0 0 1-.002.185z" fill="#B0BEC5"></path></svg><div class="css-1j7j57c"></div></div><div class="editor-wrapper__2iQa css-hk0xqt" data-cypress="EditorWrapper" style="flex: 1.13416 0 0px;"><div id="code-area" class="code-area__14YH"><div class="content__3piR"><div class="css-wqlwmu-wrapperCls editor__1Slg"><div class="container__39KX" style="position: relative;" data-size="lg"><div class="select__2kN7 css-1be7c8m-SelectContainer e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-iroxi0 css-iroxi0-xs css-iroxi0-light css-1lc17o4-icon"><path fill-rule="evenodd" d="M13.91 3.5c.436.031.795.187 1.075.468.28.28.421.63.421 1.052 0 .42-.14.771-.42 1.052-.281.28-.64.42-1.076.42-.437 0-.795-.14-1.076-.42-.28-.28-.42-.631-.42-1.052 0-.421.14-.772.42-1.052.28-.281.64-.437 1.076-.468zm-.374 4.77c.56 0 .85.233.865.7.015.468-.024.874-.117 1.217l-1.17 4.395c-.404 1.465-.576 2.385-.514 2.759.125.25.398.25.819 0 .42-.25.818-.5 1.192-.748l.047-.047c.062 0 .125.03.187.093l.187.328c.031.062 0 .124-.094.187L12.6 18.79c-.405.28-.966.507-1.683.678-.717.172-1.029-.35-.935-1.566.561-2.681 1.036-4.684 1.426-6.009.39-1.325.101-1.675-.865-1.052l-1.075.702c-.094.062-.156.085-.187.07-.032-.016-.078-.102-.14-.257L9 11.122c0-.031.047-.094.14-.187.094-.094.678-.522 1.754-1.286 1.075-.764 1.956-1.224 2.642-1.38z"></path></svg><div id="lang-select" class="css-hgxfhi css-hgxfhi-light css-hgxfhi-xs ant-select-light ant-select-xs with-icon ant-select-selected ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-controls="d1d4f77e-1c2e-4916-fe5c-f4f3c775b486" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div unselectable="on" class="ant-select-selection__placeholder" style="display: none; user-select: none;">Select...</div><div class="ant-select-selection-selected-value" title="C++" style="display: block; opacity: 1;">C++</div></div><span class="ant-select-arrow" unselectable="on" style="user-select: none;"><i aria-label="图标: down" class="anticon anticon-down ant-select-arrow-icon"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div></div></div><div class="btns__3jf0"><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M19 10H6V8h9.01V5L19 10zM8.99 16v3L5 14h13v2H8.99z"></path></svg></button></div><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M13.91 3.5c.436.031.795.187 1.075.468.28.28.421.63.421 1.052 0 .42-.14.771-.42 1.052-.281.28-.64.42-1.076.42-.437 0-.795-.14-1.076-.42-.28-.28-.42-.631-.42-1.052 0-.421.14-.772.42-1.052.28-.281.64-.437 1.076-.468zm-.374 4.77c.56 0 .85.233.865.7.015.468-.024.874-.117 1.217l-1.17 4.395c-.404 1.465-.576 2.385-.514 2.759.125.25.398.25.819 0 .42-.25.818-.5 1.192-.748l.047-.047c.062 0 .125.03.187.093l.187.328c.031.062 0 .124-.094.187L12.6 18.79c-.405.28-.966.507-1.683.678-.717.172-1.029-.35-.935-1.566.561-2.681 1.036-4.684 1.426-6.009.39-1.325.101-1.675-.865-1.052l-1.075.702c-.094.062-.156.085-.187.07-.032-.016-.078-.102-.14-.257L9 11.122c0-.031.047-.094.14-.187.094-.094.678-.522 1.754-1.286 1.075-.764 1.956-1.224 2.642-1.38z"></path></svg></button></div><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M9.984 3v2.016H8.016v4.968a2.17 2.17 0 0 1-.61 1.43C7.031 11.804 6.563 12 6 12c.563 0 1.031.195 1.406.586.375.39.578.867.61 1.43v4.968h1.968V21H8.016c-.563 0-1.04-.195-1.43-.586A1.945 1.945 0 0 1 6 18.984V15c0-.563-.195-1.031-.586-1.406a2.17 2.17 0 0 0-1.43-.61H3v-1.968h.984a2.17 2.17 0 0 0 1.43-.61C5.804 10.031 6 9.563 6 9V5.016c0-.563.195-1.04.586-1.43.39-.39.867-.586 1.43-.586h1.968zm6 0c.563 0 1.04.195 1.43.586.39.39.586.867.586 1.43V9c0 .563.195 1.031.586 1.406.39.375.867.578 1.43.61H21v1.968h-.984a2.17 2.17 0 0 0-1.43.61c-.39.375-.586.843-.586 1.406v3.984c0 .563-.195 1.04-.586 1.43-.39.39-.867.586-1.43.586h-1.968v-2.016h1.968v-4.968a2.17 2.17 0 0 1 .61-1.43c.375-.39.843-.586 1.406-.586-.563 0-1.031-.195-1.406-.586a2.17 2.17 0 0 1-.61-1.43V5.016h-1.968V3h1.968z"></path></svg></button></div><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M14 8H3l7-5v3h4a7 7 0 0 1 0 14h-4a7 7 0 0 1-7-7v-1h2v1a5 5 0 0 0 5 5h4a5 5 0 0 0 0-10z"></path></svg></button></div><div><form target="_blank" method="POST" action="https://leetcode-cn.com/playground/new/empty" style="display: none;"><input name="csrfmiddlewaretoken" type="hidden" value="t3sMFjVq47cgRQzcZP2yfstA5oJXAJVBYY0X5PpY3fVrCdBAxGTovwxxNAmsBm8A"><input name="code" type="hidden" value="/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+class Solution {
+public:
+    ListNode* removeNthFromEnd(ListNode* head, int n) {
+        
+    }
+};"><input name="question" type="hidden" value="19"><input name="testcase" type="hidden" value="[1,2,3,4,5]
+2"><input name="lang" type="hidden" value="cpp"><input name="from_submission_result" type="hidden" value=""></form><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M4 17.594L8.64 13 4 8.406 5.406 7l6 6-6 6L4 17.594zM11 18h9v2h-9v-2z"></path></svg></button></div></div><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M14.895 2c-.69.734-1.724 1.212-2.896 1.212-1.17 0-2.203-.478-2.894-1.212-.279.084-3.866 2.176-4.146 2.449.275.975.163 2.124-.42 3.157-.586 1.033-1.505 1.706-2.472 1.949-.09.383-.09 4.507 0 4.89.967.243 1.887.916 2.471 1.949.585 1.033.697 2.182.42 3.157.28.273 3.868 2.365 4.146 2.449.69-.734 1.725-1.212 2.895-1.212 1.172 0 2.206.478 2.897 1.212.278-.084 3.864-2.176 4.145-2.449-.276-.975-.164-2.124.42-3.157.585-1.033 1.505-1.706 2.472-1.949.09-.383.09-4.507 0-4.89-.967-.243-1.886-.916-2.471-1.949-.584-1.033-.696-2.182-.42-3.157-.28-.273-3.868-2.365-4.147-2.449m.195 2.39c.556.318 1.23.714 1.765 1.038a6.275 6.275 0 0 0 .817 3.147 6.215 6.215 0 0 0 2.276 2.314c.01.679.01 1.543 0 2.222a6.208 6.208 0 0 0-2.276 2.314 6.277 6.277 0 0 0-.818 3.148c-.535.323-1.207.718-1.763 1.037a6.175 6.175 0 0 0-3.092-.822c-1.103 0-2.172.29-3.09.822a91.762 91.762 0 0 1-1.763-1.037 6.277 6.277 0 0 0-.818-3.148 6.215 6.215 0 0 0-2.276-2.314 80.47 80.47 0 0 1 0-2.222 6.213 6.213 0 0 0 2.275-2.314c.552-.975.83-2.069.818-3.147.536-.324 1.209-.72 1.764-1.038a6.184 6.184 0 0 0 3.09.822 6.178 6.178 0 0 0 3.09-.822M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg></button></div><div><div class="tool-item__39Vq"><button type="transparent" class="tool-button__2YsS css-fbnww2-transparent-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M6 15H4v5h5v-2H6v-3zM4 9h2V6h3V4H4v5zm14 9h-3v2h5v-5h-2v3zM15 4v2h3v3h2V4h-5z"></path></svg></button></div></div></div><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; left: -11px; top: -11px; right: -10px; bottom: -10px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 813px; height: 71px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div><div class="react-codemirror2 css-usktbr"><div class="CodeMirror cm-s-textmate CodeMirror-wrap CodeMirror-focused"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 353px; left: 128px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true" style="display: block; bottom: 0px;"><div style="min-width: 1px; height: 482px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 56px; margin-bottom: -10px; border-right-width: 20px; min-height: 482px; padding-right: 10px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><pre class="CodeMirror-line-like"><span>xxxxxxxxxx</span></pre></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style=""><div class="CodeMirror-cursor" style="left: 72px; top: 343px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">1</div><div class="CodeMirror-gutter-elt" style="left: 40px; width: 15px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment">/**</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* Definition for singly-linked list.</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* struct ListNode {</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* &nbsp; &nbsp; int val;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* &nbsp; &nbsp; ListNode *next;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* &nbsp; &nbsp; ListNode(int x) : val(x), next(NULL) {}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">* };</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> <span class="cm-comment">*/</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">9</div><div class="CodeMirror-gutter-elt" style="left: 40px; width: 15px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">class</span> <span class="cm-def">Solution</span> {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">public</span>:</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">11</div><div class="CodeMirror-gutter-elt" style="left: 40px; width: 15px;"><div class="CodeMirror-foldgutter-open CodeMirror-guttermarker-subtle"></div></div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp;<span class="cm-variable">ListNode</span><span class="cm-operator">*</span> <span class="cm-variable">removeNthFromEnd</span>(<span class="cm-variable">ListNode</span><span class="cm-operator">*</span> <span class="cm-variable">head</span>, <span class="cm-type">int</span> <span class="cm-variable">n</span>) {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">if</span>(<span class="cm-variable">head</span><span class="cm-operator">==</span><span class="cm-atom">NULL</span>)</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-keyword">return</span> <span class="cm-variable">head</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//删除倒数第n个应该找倒数第n-1个元素</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//由于是删除元素，应该保存被删除元素的前一个节点，这里直接找前一个节点即可。</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ListNode</span><span class="cm-operator">*</span> <span class="cm-variable">newHead</span> <span class="cm-operator">=</span> <span class="cm-keyword">new</span> <span class="cm-variable">ListNode</span>(<span class="cm-operator">-</span><span class="cm-number">1</span>);</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">newHead</span><span class="cm-operator">-&gt;</span><span class="cm-variable">next</span> <span class="cm-operator">=</span> <span class="cm-variable">head</span>;</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ListNode</span><span class="cm-operator">*</span> <span class="cm-variable">f</span> <span class="cm-operator">=</span> <span class="cm-variable">head</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-variable">ListNode</span><span class="cm-operator">*</span> <span class="cm-variable">b</span> <span class="cm-operator">=</span> <span class="cm-variable">head</span>;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;<span class="cm-comment">//b先走n-1步</span></span></pre></div><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-background CodeMirror-activeline-gutter" style="left: -56px; width: 56px;"></div><div class="CodeMirror-gutter-wrapper CodeMirror-activeline-gutter" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;" class=""><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div class="" style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp; &nbsp; &nbsp; &nbsp;</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;  }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -56px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 32px;">27</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;">};</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 20px; width: 1px; border-bottom: 0px solid transparent; top: 482px;"></div><div class="CodeMirror-gutters" style="height: 502px; left: 0px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 40px;"></div><div class="CodeMirror-gutter CodeMirror-foldgutter"></div></div></div></div></div></div></div><div class="result__7KzV"></div><div class="container__3xZ9" style="position: relative;" data-size="lg"><div class="func__1Bj3"><button type="button" class="custom-testcase__19YL">控制台 <svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M7 10l5 5 5-5z"></path></svg></button><div class="contribute__1Zdu"><div>贡献 </div><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M13.91 3.5c.436.031.795.187 1.075.468.28.28.421.63.421 1.052 0 .42-.14.771-.42 1.052-.281.28-.64.42-1.076.42-.437 0-.795-.14-1.076-.42-.28-.28-.42-.631-.42-1.052 0-.421.14-.772.42-1.052.28-.281.64-.437 1.076-.468zm-.374 4.77c.56 0 .85.233.865.7.015.468-.024.874-.117 1.217l-1.17 4.395c-.404 1.465-.576 2.385-.514 2.759.125.25.398.25.819 0 .42-.25.818-.5 1.192-.748l.047-.047c.062 0 .125.03.187.093l.187.328c.031.062 0 .124-.094.187L12.6 18.79c-.405.28-.966.507-1.683.678-.717.172-1.029-.35-.935-1.566.561-2.681 1.036-4.684 1.426-6.009.39-1.325.101-1.675-.865-1.052l-1.075.702c-.094.062-.156.085-.187.07-.032-.016-.078-.102-.14-.257L9 11.122c0-.031.047-.094.14-.187.094-.094.678-.522 1.754-1.286 1.075-.764 1.956-1.224 2.642-1.38z"></path></svg></div></div><div class="action__ulOO"><button class="runcode__QfP3 css-1mjbcfg-sm-Btn e5i1odf0" data-cypress="RunCode" type="primary"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><defs><path id="play-arrow_svg__a" d="M8 5v14l11-7z"></path><mask id="play-arrow_svg__b"><use fill-rule="evenodd" xlink:href="#play-arrow_svg__a"></use></mask></defs><g fill-rule="evenodd"><use xlink:href="#play-arrow_svg__a"></use><g fill-rule="nonzero" mask="url(#play-arrow_svg__b)"><path d="M0 0h24v24H0z"></path></g></g></svg><span class="css-1km43m6-BtnContent e5i1odf1">执行代码</span></button><button type="primary" class="submit__1Z6o css-at5h1k-sm-Btn e5i1odf0" data-cypress="SubmitCode"><span class="css-1km43m6-BtnContent e5i1odf1">提交</span></button></div><div class="erd_scroll_detection_container erd_scroll_detection_container_animation_active" style="visibility: hidden; display: inline; width: 0px; height: 0px; z-index: -1; overflow: hidden; margin: 0px; padding: 0px;"><div dir="ltr" class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; width: 100%; height: 100%; left: 0px; top: 0px;"><div class="erd_scroll_detection_container" style="position: absolute; flex: 0 0 auto; overflow: hidden; z-index: -1; visibility: hidden; left: -11px; top: -11px; right: -10px; bottom: -10px;"><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; left: 0px; top: 0px; width: 813px; height: 84px;"></div></div><div style="position: absolute; flex: 0 0 auto; overflow: scroll; z-index: -1; visibility: hidden; width: 100%; height: 100%;"><div style="position: absolute; width: 200%; height: 200%;"></div></div></div></div></div></div></div><div class="css-cqyrzo-Container e5i1odf0"></div></div></div></div><div class="note-btn-cn__uUt0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M4 8l6-6h8c1.1 0 2 .9 2 2v16c0 1.1-.89 2-1.99 2H6c-1.1 0-2-.9-2-2V8zm14.01 12V4H11v5H6v11h12.01z"></path></svg></div><div class="note__1pSK" status="exited"><div class="notewrap__3psn"><div id="simplemde-editor-1-wrapper"><textarea id="simplemde-editor-1" style="display: none;"></textarea><div class="editor-toolbar"><button class="bold" type="button" title="Bold (Cmd-B)" tabindex="-1"><i class="fa fa-bold"></i></button><button class="italic" type="button" title="Italic (Cmd-I)" tabindex="-1"><i class="fa fa-italic"></i></button><button class="heading" type="button" title="Heading (Cmd-H)" tabindex="-1"><i class="fa fa-header fa-heading"></i></button><i class="separator">|</i><button class="code" type="button" title="Code (Cmd-⌥-C)" tabindex="-1"><i class="fa fa-code"></i></button><button class="unordered-list" type="button" title="Generic List (Cmd-L)" tabindex="-1"><i class="fa fa-list-ul"></i></button><button class="ordered-list" type="button" title="Numbered List (Cmd-⌥-L)" tabindex="-1"><i class="fa fa-list-ol"></i></button><i class="separator">|</i><button class="link" type="button" title="Create Link (Cmd-K)" tabindex="-1"><i class="fa fa-link"></i></button><button class="image" type="button" title="Insert Image (Cmd-⌥-I)" tabindex="-1"><i class="fa fa-image"></i></button><i class="separator">|</i><button class="preview no-disable" type="button" title="Toggle Preview (Cmd-P)" tabindex="-1"><i class="fa fa-eye"></i></button></div><div class="CodeMirror cm-s-easymde CodeMirror-wrap CodeMirror-empty"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 15px; left: 15px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" tabindex="-1" cm-not-content="true"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" tabindex="-1" cm-not-content="true"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" style="min-height: 300px;"><div class="CodeMirror-sizer" style="margin-left: 0px; margin-bottom: -10px; border-right-width: 20px; min-height: 28px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><pre class="CodeMirror-placeholder CodeMirror-line-like" style="height: 0px; overflow: visible; direction: ltr;">请输入...( 支持使用 Markdown )</pre><div class="CodeMirror-measure"></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation"><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div></div></div></div></div><div style="position: absolute; height: 20px; width: 1px; border-bottom: 0px solid transparent; top: 28px;"></div><div class="CodeMirror-gutters" style="display: none; height: 48px;"></div></div></div><div class="editor-preview-side editor-preview"></div></div><div class="close__yYzt"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg></div><div class="savedmsg__utEs" data-status="false">已保存</div></div></div></div></div></div></div>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/runtime_main.cdf51a90.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/styles.fe29e6d7.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-596046b7.1fd1861d.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-88ad8183.72e148cb.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-f693a0bb.5cb8593c.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-ea8a6886.a1d37802.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-78587d68.806ba2ee.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-b3a903c8.29d998a4.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/npm-cb4214fe.eec3bb3e.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/vendor.91d18732.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-components.e651a5b3.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-modules.1791c762.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-common.bf5bbc4f.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-main.e00ba32f.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-track.b8916139.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-jobs.42d040f8.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-assets.e16cb248.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/noj-schema.e678cfcc.js"></script>
+  
+  <script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/main.be245ecf.js"></script><div class="question-picker-detail__2A9V"><div class="question-picker-mask__2FlK hide__TBpZ"></div><div class="question-picker-detail-menu__3NQq hide__w7-X"><div class="question-picker-toolbar-wrapper__1TAh"><div class="picker-toolbar__vOYx" data-tour-index="3"><div class="list-filter__HhlZ"><div class="list-filter-selector__1EgW css-1be7c8m-SelectContainer e5i1odf0"><div class="css-hgxfhi css-hgxfhi-dark css-hgxfhi-sm ant-select-dark ant-select-sm ant-select-selected ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-controls="16399b9b-2cf7-4306-9ddb-98ab9c0a325b" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div unselectable="on" class="ant-select-selection__placeholder" style="display: none; user-select: none;">Select...</div><div class="ant-select-selection-selected-value" title="全部题目" style="display: block; opacity: 1;">全部题目</div><div class="ant-select-search ant-select-search--inline" style="display: none;"><div class="ant-select-search__field__wrap"><input autocomplete="off" class="ant-select-search__field" value=""><span class="ant-select-search__field__mirror">&nbsp;</span></div></div></div><span class="ant-select-arrow" unselectable="on" style="user-select: none;"><i aria-label="图标: down" class="anticon anticon-down ant-select-arrow-icon"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div></div></div></div><div class="handlers__312N"><span class="css-1gjbwd3-sm-Wrapper e5i1odf0"><span class=" css-e97wc7-Wrapper e5i1odf1"><input class="picker-toolbar-search__ekud css-1o94qae-Input e5i1odf0" placeholder="搜索题目"></span><span class="css-ba8qtq-search"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg></span></span><div class="space__2d2f"></div><button type="night" class="false css-1d2ijm4-night-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M10.707 9.293A1 1 0 0 1 11 10v7H9v-6.586L4.293 5.707C3.663 5.077 4.109 4 5 4h14c.89 0 1.337 1.077.707 1.707L15 10.414V21h-2V10a1 1 0 0 1 .293-.707L16.586 6H7.414l3.293 3.293z"></path></svg></button><div class="space__2d2f"></div><div class="picker-toolbar-select__1GFb css-1be7c8m-SelectContainer e5i1odf0"><div class="css-hgxfhi css-hgxfhi-dark css-hgxfhi-sm ant-select-dark ant-select-sm ant-select-selected ant-select ant-select-enabled"><div class="ant-select-selection
+            ant-select-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-controls="fabab510-f354-420a-ee7f-4545b1958260" aria-expanded="false" tabindex="0"><div class="ant-select-selection__rendered"><div unselectable="on" class="ant-select-selection__placeholder" style="display: none; user-select: none;">Select...</div><div class="ant-select-selection-selected-value" title="" style="display: block; opacity: 1;">1</div></div><span class="ant-select-arrow" unselectable="on" style="user-select: none;"><i aria-label="图标: down" class="anticon anticon-down ant-select-arrow-icon"><svg viewBox="64 64 896 896" focusable="false" class="" data-icon="down" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"></path></svg></i></span></div></div></div><div class="space__2d2f"></div><button type="night" class="css-1d2ijm4-night-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path></svg></button><div class="space__2d2f"></div><button type="night" class="css-1d2ijm4-night-sm-Btn e5i1odf0"><svg viewBox="0 0 24 24" width="1em" height="1em" class="css-1lc17o4-icon"><path fill-rule="evenodd" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></button></div></div></div><div class="question-picker-questions-wrapper__13qM"><div class="lc-theme-dark scroll-wrapper__3FUp"><div></div><div class="scroll-inner-wrapper__2Xcv" style="height: 561px; width: 650px;"><div class="scrollbar-container ps ps--active-y"><div class="scroll-content__3wFj"><div class="question-list__1Kev"><div class="question__3lUu" data-title-slug="two-sum" data-question-id="1" data-paid-only="false" title="two-sum"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#1 两数之和</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="add-two-numbers" data-question-id="2" data-paid-only="false" title="add-two-numbers"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#2 两数相加</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="longest-substring-without-repeating-characters" data-question-id="3" data-paid-only="false" title="longest-substring-without-repeating-characters"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#3 无重复字符的最长子串</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="median-of-two-sorted-arrays" data-question-id="4" data-paid-only="false" title="median-of-two-sorted-arrays"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#4 寻找两个有序数组的中位数</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="longest-palindromic-substring" data-question-id="5" data-paid-only="false" title="longest-palindromic-substring"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#5 最长回文子串</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="zigzag-conversion" data-question-id="6" data-paid-only="false" title="zigzag-conversion"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#6 Z 字形变换</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="reverse-integer" data-question-id="7" data-paid-only="false" title="reverse-integer"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#7 整数反转</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="string-to-integer-atoi" data-question-id="8" data-paid-only="false" title="string-to-integer-atoi"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#8 字符串转换整数 (atoi)</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="palindrome-number" data-question-id="9" data-paid-only="false" title="palindrome-number"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#9 回文数</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="regular-expression-matching" data-question-id="10" data-paid-only="false" title="regular-expression-matching"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#10 正则表达式匹配</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="container-with-most-water" data-question-id="11" data-paid-only="false" title="container-with-most-water"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#11 盛最多水的容器</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="integer-to-roman" data-question-id="12" data-paid-only="false" title="integer-to-roman"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#12 整数转罗马数字</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="roman-to-integer" data-question-id="13" data-paid-only="false" title="roman-to-integer"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#13 罗马数字转整数</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="longest-common-prefix" data-question-id="14" data-paid-only="false" title="longest-common-prefix"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#14 最长公共前缀</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="3sum" data-question-id="15" data-paid-only="false" title="3sum"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#15 三数之和</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="3sum-closest" data-question-id="16" data-paid-only="false" title="3sum-closest"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#16 最接近的三数之和</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="letter-combinations-of-a-phone-number" data-question-id="17" data-paid-only="false" title="letter-combinations-of-a-phone-number"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#17 电话号码的字母组合</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="4sum" data-question-id="18" data-paid-only="false" title="4sum"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#18 四数之和</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu active__2qli" data-title-slug="remove-nth-node-from-end-of-list" data-question-id="19" data-paid-only="false" title="remove-nth-node-from-end-of-list"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"></path></svg></span><span>#19 删除链表的倒数第N个节点</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="valid-parentheses" data-question-id="20" data-paid-only="false" title="valid-parentheses"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#20 有效的括号</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="merge-two-sorted-lists" data-question-id="21" data-paid-only="false" title="merge-two-sorted-lists"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#21 合并两个有序链表</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="generate-parentheses" data-question-id="22" data-paid-only="false" title="generate-parentheses"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#22 括号生成</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="merge-k-sorted-lists" data-question-id="23" data-paid-only="false" title="merge-k-sorted-lists"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#23 合并K个排序链表</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="swap-nodes-in-pairs" data-question-id="24" data-paid-only="false" title="swap-nodes-in-pairs"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#24 两两交换链表中的节点</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="reverse-nodes-in-k-group" data-question-id="25" data-paid-only="false" title="reverse-nodes-in-k-group"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#25 K 个一组翻转链表</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="remove-duplicates-from-sorted-array" data-question-id="26" data-paid-only="false" title="remove-duplicates-from-sorted-array"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#26 删除排序数组中的重复项</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="remove-element" data-question-id="27" data-paid-only="false" title="remove-element"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#27 移除元素</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="implement-strstr" data-question-id="28" data-paid-only="false" title="implement-strstr"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#28 实现 strStr()</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="divide-two-integers" data-question-id="29" data-paid-only="false" title="divide-two-integers"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#29 两数相除</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="substring-with-concatenation-of-all-words" data-question-id="30" data-paid-only="false" title="substring-with-concatenation-of-all-words"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#30 串联所有单词的子串</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="next-permutation" data-question-id="31" data-paid-only="false" title="next-permutation"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#31 下一个排列</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="longest-valid-parentheses" data-question-id="32" data-paid-only="false" title="longest-valid-parentheses"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#32 最长有效括号</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="search-in-rotated-sorted-array" data-question-id="33" data-paid-only="false" title="search-in-rotated-sorted-array"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#33 搜索旋转排序数组</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="find-first-and-last-position-of-element-in-sorted-array" data-question-id="34" data-paid-only="false" title="find-first-and-last-position-of-element-in-sorted-array"><div class="question-row-left__3GJe"><span class="question-status__3eE7"><svg viewBox="0 0 24 24" width="1em" height="1em" class="question-row-icon__1hmF css-1lc17o4-icon"><path fill-rule="evenodd" d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"></path></svg></span><span>#34 在排序数组中查找元素的第一个和最后一个位置</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="search-insert-position" data-question-id="35" data-paid-only="false" title="search-insert-position"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#35 搜索插入位置</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="valid-sudoku" data-question-id="36" data-paid-only="false" title="valid-sudoku"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#36 有效的数独</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="sudoku-solver" data-question-id="37" data-paid-only="false" title="sudoku-solver"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#37 解数独</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="count-and-say" data-question-id="38" data-paid-only="false" title="count-and-say"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#38 报数</span></div><div class="question-row-right__D_cf"><span>简单</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="combination-sum" data-question-id="39" data-paid-only="false" title="combination-sum"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#39 组合总和</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="combination-sum-ii" data-question-id="40" data-paid-only="false" title="combination-sum-ii"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#40 组合总和 II</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="first-missing-positive" data-question-id="41" data-paid-only="false" title="first-missing-positive"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#41 缺失的第一个正数</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="trapping-rain-water" data-question-id="42" data-paid-only="false" title="trapping-rain-water"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#42 接雨水</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="multiply-strings" data-question-id="43" data-paid-only="false" title="multiply-strings"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#43 字符串相乘</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="wildcard-matching" data-question-id="44" data-paid-only="false" title="wildcard-matching"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#44 通配符匹配</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="jump-game-ii" data-question-id="45" data-paid-only="false" title="jump-game-ii"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#45 跳跃游戏 II</span></div><div class="question-row-right__D_cf"><span>困难</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="permutations" data-question-id="46" data-paid-only="false" title="permutations"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#46 全排列</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="permutations-ii" data-question-id="47" data-paid-only="false" title="permutations-ii"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#47 全排列 II</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="rotate-image" data-question-id="48" data-paid-only="false" title="rotate-image"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#48 旋转图像</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="group-anagrams" data-question-id="49" data-paid-only="false" title="group-anagrams"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#49 字母异位词分组</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div><div class="question__3lUu" data-title-slug="powx-n" data-question-id="50" data-paid-only="false" title="powx-n"><div class="question-row-left__3GJe"><span class="question-status__3eE7"></span><span>#50 Pow(x, n)</span></div><div class="question-row-right__D_cf"><span>中等</span><span class="paid-only-status__13fo"></span></div></div></div></div><div class="ps__rail-x" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" style="top: 0px; right: 0px; height: 561px;"><div class="ps__thumb-y" tabindex="0" style="top: 0px; height: 173px;"></div></div></div></div></div></div></div></div>
+  
+
+  <script>
+    // avoid running analysis codes for prerender
+    if (!/prerender/i.test(navigator.userAgent) && /leetcode-cn\.com/.test(window.location.href)) {
+      // 百度统计
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?fa218a3ff7179639febdb15e372f411c";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+
+      // Google Analytics
+      (function() {
+        var script = document.createElement("script");
+        script.src = "https://www.googletagmanager.com/gtag/js?id=UA-131851415-1";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(script, s);
+        script.onload = function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-131851415-1');
+        }
+      })();
+    }
+  </script>
+
+
+  <!-- Hotfix -->
+<style>
+/* Monaco */
+[class*="containerCls"] {
+  border-left: 1px solid #eee;
+}
+
+.btns__3jf0 > .tool-item__39Vq:first-child {
+  position: relative;
+}
+.btns__3jf0 > .tool-item__39Vq:first-child::after {
+  content: "新";
+  font-weight: bold;
+  dispaly: block;
+  position: absolute;
+  top: 0;
+  right: 0px;
+  color: rgb(245,0,87);
+  font-size: 12px;
+  transform: scale(0.8);
+}
+
+
+
+
+@media (max-width: 600px) {
+  .css-6ku2ay-OwnershipWrapper {
+    flex-direction: column;
+    line-height: 38px;
+  }
+}
+
+#circle-article #lc-header {
+    box-shadow: 0 0 5px rgba(0,0,0,0.12);
+    border-bottom: none;
+}
+[class*="ghost-xs-Btn-ShortcutButton"][data-type="video"] {
+  position: relative;
+  color: #009975;
+}
+[class*="ghost-xs-Btn-ShortcutButton"][data-type="video"]::after {
+  content: "视频";
+  display:block;
+  color: rgb(245,0,87);
+  font-weight: bold;
+  font-size: 12px;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  transform: scale(0.8);
+}
+</style>
+<script>
+if(window.location.pathname.includes('/circle/article')) {
+  document.querySelector('body').id = "circle-article";
+}
+
+
+
+
+
+
+// dynamic script
+function addCoins(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      addCoins(selector);
+    }, 100);
+  } else {
+    document.querySelector(selector).innerHTML = document.querySelector(selector).innerHTML + `
+(<span style="color: orange">
++50 <img src="https://static.leetcode-cn.com/cn-legacy-assets/images/coin.gif" width="12" style="transform: translateY(-2px);" />
+</span>)
+`;
+  }
+}
+
+if(window.location.pathname.includes("/tag/")) {
+  addCoins('span[class*="BtnContent"]');
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+<!--@START: Nav Highlight Tag -->
+<style>
+[class*="NavbarListItem"]{
+  position: relative;
+}
+
+[class*="NavbarListItem"] a[href="/circle/"]::after {
+  right: -25px !important;
+  content: "new" !important;
+  background: rgb(236,64,122) !important;
+}
+[class*="NavbarListItem"] a[href="/interview/"]::after {
+  right: -25px !important;
+  content: "hot" !important;
+  background: orange !important;
+}
+
+li.ant-dropdown-menu-item a {
+  position: relative;
+}
+li.ant-dropdown-menu-item a::after{
+  display: block;
+  font-size: 12px;
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  font-weight: 500;
+  transform: scale(0.8);
+}
+li.ant-dropdown-menu-item a[href="/store/"]::after{
+  content: "new";
+  color: red;
+}
+li.ant-dropdown-menu-item a[href="/premium/"]::after{
+  content: "5折";
+  color: #009975;
+}
+
+[class*="PromoteButton"] {
+  position: relative;
+}
+
+
+[class*="NavbarListItem"] a[href="/interview/"]::after,
+[class*="NavbarListItem"] a[href="/circle/"]::after{
+  content: "new";
+  display: block;
+  background: red;
+  border-radius: 20px;
+  padding: 0px 8px;
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  top: -10px;
+  right: -15px;
+  font-weight: 500;
+  transform: scale(0.6);
+}
+</style>
+<!--@END: Nav Highlight Tag -->
+
+
+
+
+
+
+
+
+
+
+
+<!--@START: New Feature Tag -->
+<script type="text/javascript">
+var stroageItemShowNew = 'student';
+var showNewFt = localStorage.getItem(stroageItemShowNew + 'x');
+
+function closeNewFt() {
+  localStorage.setItem(stroageItemShowNew + 'x', true);
+  document.querySelector("#lc_navbar #new-ft").remove();
+}
+
+var newFt = '<a href="/premium/" target="_blank">\
+  <img src="https://assets.leetcode-cn.com/lccn-resources/student.png" />\
+  </a>';
+
+
+// dynamic script
+function applyNewFt(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      applyNewFt(selector);
+    }, 100);
+  } else {
+    console.log("Found!");
+    var newFtDiv = document.createElement('div');
+    newFtDiv.innerHTML = newFt;
+    newFtDiv.id = "new-ft";
+    document.querySelector(selector).appendChild(newFtDiv);
+  }
+}
+
+if(showNewFt == null) {
+  applyNewFt('[class*="NavWrapper"] [class*="NavContainer"]');
+}
+</script>
+
+
+
+
+<style>
+  #new-ft img {
+    width: 61px;
+  }
+  #new-ft {
+    transition: all 0.2s;
+    cursor: pointer;
+    position: absolute;
+    z-index: 800;
+    top: -10px;
+    right: 300px;
+  }
+  #new-ft:hover {
+    top: -5px;
+  }
+  @media (max-width: 767px) {
+    #new-ft {
+      right: 60px;
+    }
+  }
+  [class*="NavWrapper"] [class*="NavContainer"]{
+    position: relative;
+  }
+</style>
+<!--@END: New Feature Tag -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+a.header-anchor {
+  display:none;
+}
+</style>
+
+<script>
+if (/discuss.lingkou.com/.test(location.href)) {
+  __runForLingkouDotCom()
+}
+
+function __runForLingkouDotCom() {
+function findSocial(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      findSocial(selector);
+    }, 100);
+  } else {
+    document.querySelector(selector).style.display = "none";
+  }
+}
+findSocial('.css-3hcwga-NavbarMenuItem:nth-child(6)');
+
+// dynamic script
+function findFooter(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      findFooter(selector);
+    }, 100);
+  } else {
+    document.querySelector(selector).innerHTML = '<div><ul class="css-3fea3i-CnLicensingWrapper e5i1odf0"><li><a href="http://www.miitbeian.gov.cn">沪ICP备18019787号</a></li><li><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31011502007802">沪公网安备31011502007802号</a></li><li><a href="http://www.shjbzx.cn/">上海市互联网违法和不良信息举报中心</a></li><li><a href="http://report.12377.cn:13225/toreportinputNormal_anis.do">中国互联网违法和不良信息举报中心</a></li></ul></div>';
+  }
+}
+findFooter('.css-3fea3i-CnLicensingWrapper.e5i1odf0');
+}
+</script>
+
+
+
+
+
+
+
+
+<script>
+// dynamic script
+function findpager(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      document.body.classList.remove("shared-ws-collage");
+      findpager(selector);
+    }, 100);
+  } else {
+    setTimeout(function() {
+      document.body.classList.add("shared-ws-collage");
+      findpager(selector);
+    }, 100); 
+  }
+}
+
+if(window.location.href.includes('?college=')) {
+  findpager('#ranking button[type="primary"][data-page="1"]');
+}
+</script>
+
+<style>
+.shared-ws-collage div[class*="PopularityRankInner"] .ant-table-wrapper .ant-table-tbody > tr:first-child {
+  color: orange;
+  font-weight: bold;
+}
+
+.shared-ws-collage div[class*="PopularityRankInner"] .ant-table-wrapper .ant-table-tbody > tr * {
+  background: none;
+}
+.shared-ws-collage div[class*="PopularityRankInner"] .ant-table-wrapper .ant-table-tbody > tr:first-child > td {
+  border-bottom: none;
+}
+.shared-ws-collage div[class*="PopularityRankInner"] .ant-table-wrapper .ant-table-tbody > tr:first-child {
+  height: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .shared-ws-collage  div[class*="PopularityRankInner"] .ant-table-body::before {
+    content: " ";
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.15);
+    height: 40px;
+    margin-bottom: -75px;
+  }
+  .shared-ws-collage  div[class*="PopularityRankInner"] .college-contest-popularity-share {
+    padding-top: 5px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .shared-ws-collage  div[class*="PopularityRankInner"] .ant-table-body::before {
+    content: " ";
+    display: block;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0px 5px rgba(0,0,0,0.15);
+    height: 50px;
+    margin-bottom: -50px;
+  }
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+var currLocation = window.location.pathname;
+if(currLocation.includes('/charon/tag') && currLocation.match(/gs\/[0-9]+/g) == null){
+  document.body.classList.add("charon-tag");
+  var newMeta = document.createElement('meta');
+  newMeta.setAttribute('name', 'apple-mobile-web-app-capable');
+  newMeta.setAttribute('content', 'yes');
+  document.getElementsByTagName('head')[0].appendChild(newMeta);
+}
+</script>
+<style>
+@media screen and (max-width: 736px) {
+.charon-tag #lc-home > div:first-child {
+  display: none;
+}
+}
+@media screen and (min-width: 737px) {
+.charon-tag #lc-content > div {
+  max-width: 100%;
+}
+.charon-tag #lc-content > div:first-child > div:first-child {
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  z-index: 100;
+}
+
+.charon-tag #lc-content {
+margin-top: 35px;
+}
+
+.charon-tag .ant-pagination.ant-table-pagination {
+  position: fixed;
+  bottom: 10px;
+  padding: 10px;
+  padding-right: 0px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  right: 50%;
+  transform: translateX(50%);
+  background: white;
+}
+.charon-tag #lc-footer {
+  height: 80px;
+}
+.charon-tag #lc-footer *, .charon-tag #lc-header {
+  display: none;
+}
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+// dynamic script
+function findContestHosts(selector) {
+  if (document.querySelector(selector) == null) {
+    setTimeout(function() {
+      findContestHosts(selector);
+    }, 100);
+  } else {
+    document.querySelector(selector).innerText = "领扣网络（上海）有限公司";
+  }
+}
+if(window.location.pathname.includes('/contest/college/2019-spring')){
+  findContestHosts(".css-1fzgbam-OwnershipCompanyTitle");
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+_atrk_opts = { atrk_acct:"tIUcs1Y1Mn20Io", domain:"leetcode-cn.com",dynamic: true};
+(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
+</script>
+<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=tIUcs1Y1Mn20Io" style="display:none" height="1" width="1" alt="" /></noscript>
+
+
+
+
+
+
+
+
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<script>
+(function(){
+var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?2dffe68ece6721ae7c687d98926f7c17":"https://jspassport.ssl.qhimg.com/11.0.1.js?2dffe68ece6721ae7c687d98926f7c17";
+document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script><script src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/11.0.1.js" id="sozz"></script><script charset="utf-8" src="./19. 删除链表的倒数第N个节点 - 力扣（LeetCode）_files/ab77b6ea7f3fbf79.js"></script>
+
+
+</body></html>
